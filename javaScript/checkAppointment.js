@@ -1,6 +1,6 @@
 var appointments;
 $(function () {
-    const startTime = performance.now(); // 開始時間
+    // const startTime = performance.now(); // 開始時間
 
     var appointmentsString = getData("appointments");
     appointmentsString.then(ap => {
@@ -13,12 +13,12 @@ $(function () {
                 + '<button type="button" class="btn btn-success" onclick="clickResult(' + i + ')">結果</button>'
                 + '<button type="button" class="btn btn-danger" onclick="deleteAppointment(' + i + ')">削除</button></td></tr>');
         }
-        const endTime = performance.now();
-        alert("実行時間： " + (endTime - startTime) + " ms");
+        // const endTime = performance.now();
+        // alert("実行時間： " + (endTime - startTime) + " ms");
     }).catch(err => {
         console.log("検診予約が登録されていません");
-        const endTime = performance.now();
-        alert("実行時間： " + (endTime - startTime) + " ms");
+        // const endTime = performance.now();
+        // alert("実行時間： " + (endTime - startTime) + " ms");
         });
 
 })
